@@ -1,0 +1,8 @@
+.Jumbotron {
+  background: #673ab7;
+  height: 60px;
+  color: whitesmoke;
+  font-size: 30px;
+  display: flex;
+  padding: 15px 0 0 15px;
+}
