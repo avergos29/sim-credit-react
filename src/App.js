@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Jumbotron from "./Jumbotron.js";
+import Form from "./Form.js";
+import Result from "./Result.js";
 
 function App() {
+  const [data, setData] = useState({
+    price: 600000,
+    amount: 300000,
+    rate: 1.9,
+    duration: 25
+  });
+
+  const handleFormChanged = values => setData(values);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Jumbotron />
+      <Form data={data} onFormChanged={handleFormChanged} />
+      <Result data={data}></Result>
     </div>
   );
 }

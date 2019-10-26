@@ -1,0 +1,16 @@
+.Form {
+  width: 80%;
+  margin: 50px 10%;
+}
+
+.Form__input {
+  margin-bottom: 20px;
+}
+
+.Form__input > label {
+  display: block;
+}
+
+.Form__submit {
+  visibility: hidden;
+}
